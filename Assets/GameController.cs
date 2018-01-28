@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     public float replyWait = 2.0f;
     private static int totalWeightage = 0;
+
+    private string partialText;
+    private string fullText = "Davis";
+    public float delay = 0.1f;
+
     public void Start()
     {
         Choice obj = GetComponent<Choices>().meatOfTheStory[0];
@@ -39,6 +44,7 @@ public class GameController : MonoBehaviour {
         Letter.choiceNumberSelected.Add(Letter.currentChoice);
         totalWeightage += GetWeight();
         signMailButton.interactable = false;
+        StartCoroutine(OutputText());
         Letter.letterId++;
         StartCoroutine(WaitForReply());
         Debug.Log(totalWeightage);
@@ -63,13 +69,16 @@ public class GameController : MonoBehaviour {
     }
     public void ContinueWithLetter()
     {
+        signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
         ReplyLetter.SetActive(false);
+        signMailButton.interactable = true;
+        GameObject.FindGameObjectWithTag("Signature").SetActive(true);
     }
 
     public void RecievedMail()
     {
         MessageRecievedButton.SetActive(false);
-        
+        GameObject.FindGameObjectWithTag("Signature").SetActive(false);
         ReplyLetter.SetActive(true);
         UpdateChoices();
         signMailButton.interactable = true;
@@ -81,6 +90,15 @@ public class GameController : MonoBehaviour {
         MessageRecievedButton.SetActive(true);
     }
 
+    IEnumerator OutputText()
+    {
+        for (int i = 0; i <= fullText.Length; i++)
+        {
+            partialText = fullText.Substring(0, i);
+            signMailButton.GetComponentInChildren<Text>().text = partialText;
+            yield return new WaitForSeconds(delay);
+        }
+    }
     public void Update()
     {
       //  Debug.Log(Choices.route.Count);
