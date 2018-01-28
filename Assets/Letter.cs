@@ -11,7 +11,7 @@ public class Letter : MonoBehaviour{
     {
         choiceNumberSelected = new List<int>();
         selectedChoices = new List<Choice>();
-        currentChoice = 0;
+        currentChoice = -1;
     }
     
 }

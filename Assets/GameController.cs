@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     public float replyWait = 2.0f;
     private static int totalWeightage = 0;
+    private static int lastChoice = -1;
 
     private string partialText;
     private string fullText = "From Davis";
@@ -41,13 +42,21 @@ public class GameController : MonoBehaviour {
 
     public void SignLetter()
     {
-        Letter.choiceNumberSelected.Add(Letter.currentChoice);
-        totalWeightage += GetWeight();
-        signMailButton.interactable = false;
-        StartCoroutine(OutputText());
-        Letter.letterId++;
-        StartCoroutine(WaitForReply());
-        Debug.Log(totalWeightage);
+        if (lastChoice != Letter.currentChoice)
+        {
+            GameObject.FindGameObjectWithTag("Choice01").GetComponent<Button>().interactable = false;
+            GameObject.FindGameObjectWithTag("Choice02").GetComponent<Button>().interactable = false;
+            GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = false;
+
+            Letter.choiceNumberSelected.Add(Letter.currentChoice);
+            totalWeightage += GetWeight();
+            signMailButton.interactable = false;
+            StartCoroutine(OutputText());
+            Letter.letterId++;
+            StartCoroutine(WaitForReply());
+            lastChoice = Letter.currentChoice;
+        }
+        //Debug.Log(totalWeightage);
     }
     //Unique ID for each choice required
     int GetWeight()
@@ -69,16 +78,18 @@ public class GameController : MonoBehaviour {
     }
     public void ContinueWithLetter()
     {
+        GameObject.FindGameObjectWithTag("Choice01").GetComponent<Button>().interactable = true;
+        GameObject.FindGameObjectWithTag("Choice02").GetComponent<Button>().interactable = true;
+        GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = true;
+
         signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
         ReplyLetter.SetActive(false);
         signMailButton.interactable = true;
-        //GameObject.FindGameObjectWithTag("Signature").SetActive(true);
     }
 
     public void RecievedMail()
     {
         MessageRecievedButton.SetActive(false);
-        //GameObject.FindGameObjectWithTag("Signature").SetActive(false);
         ReplyLetter.SetActive(true);
         UpdateChoices();
         signMailButton.interactable = true;
@@ -99,6 +110,7 @@ public class GameController : MonoBehaviour {
             yield return new WaitForSeconds(delay);
         }
     }
+  
     public void Update()
     {
       //  Debug.Log(Choices.route.Count);
