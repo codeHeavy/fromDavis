@@ -11,19 +11,22 @@ public class ReplaceText : MonoBehaviour {
     public float delay = 0.1f;
     private string partialText;
     private string fullText;
+    bool clickable = true;
     private void Start()
     {
         textObject = GameObject.FindGameObjectWithTag("LetterText").GetComponent<Text>();
-        //gameObject.GetComponentInChildren<Text>().text = thisChoice.sentence;
     }
 
     public void OnButtonClick()
     {
-        string selectedOption = gameObject.GetComponentInChildren<Text>().text;
-        //textObject.text = selectedOption;
-        fullText = selectedOption;
-        StartCoroutine(OutputText());
-        Letter.currentChoice = thisChoice.choiceNumber;
+        if (clickable)
+        {
+            string selectedOption = gameObject.GetComponentInChildren<Text>().text;
+            fullText = selectedOption;
+            StartCoroutine(OutputText());
+            Letter.currentChoice = thisChoice.choiceNumber;
+            clickable = false;
+        }
     }
 
     public void ChangeChoices()
@@ -41,6 +44,10 @@ public class ReplaceText : MonoBehaviour {
             partialText = fullText.Substring(0, i);
             textObject.text = partialText;
             yield return new WaitForSeconds(delay);
+        }
+        if (partialText.Equals(fullText))
+        {
+            clickable = true;
         }
     }
 }

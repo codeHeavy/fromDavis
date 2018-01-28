@@ -10,6 +10,8 @@ TagManager:
   - Choice03
   - SignLetter
   - Reply
+  - Signature
+  - Obituary
   layers:
   - Default
   - TransparentFX

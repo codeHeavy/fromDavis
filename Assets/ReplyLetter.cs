@@ -22,10 +22,10 @@ public class ReplyLetter : MonoBehaviour {
 
     private string ChooseReply()
     {
-        string reply = "";
-        if (Letter.currentChoice == 0)
-            reply = replies[0];
-        return reply;
+        //tring reply = "";
+       
+        return replies[Letter.currentChoice];
+        //return reply;
         //Check list of selected choices ande give an ideal sequence of choice
     }
     

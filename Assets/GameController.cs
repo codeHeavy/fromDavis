@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
     private static int totalWeightage = 0;
 
     private string partialText;
-    private string fullText = "Davis";
+    private string fullText = "From Davis";
     public float delay = 0.1f;
 
     public void Start()
@@ -72,13 +72,13 @@ public class GameController : MonoBehaviour {
         signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
         ReplyLetter.SetActive(false);
         signMailButton.interactable = true;
-        GameObject.FindGameObjectWithTag("Signature").SetActive(true);
+        //GameObject.FindGameObjectWithTag("Signature").SetActive(true);
     }
 
     public void RecievedMail()
     {
         MessageRecievedButton.SetActive(false);
-        GameObject.FindGameObjectWithTag("Signature").SetActive(false);
+        //GameObject.FindGameObjectWithTag("Signature").SetActive(false);
         ReplyLetter.SetActive(true);
         UpdateChoices();
         signMailButton.interactable = true;
