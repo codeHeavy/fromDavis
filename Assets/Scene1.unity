@@ -551,7 +551,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
-    m_FontSize: 24
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -1062,44 +1062,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choices_route01:
-  - Hey, I do not know who this is, and I better not know. Because this is offensive
-    and a very sick joke. Please do not use her name, it has been a difficult time
-    accepting this.
+  - "I do not know who this is, but this is a very sick joke. Please do not use her
+    name, it has been a difficult time accepting this. \r\n"
   - You ignore the letter
-  - " Are you kidding me? This is ridiculous. You think this is funny? It\u2019s not.
-    You want to get reported? Using her name and address and everything.  Please screw
-    yourself and do not bother with this again."
+  - "Are you kidding me? This is ridiculous. You think this is funny? It\u2019s not.
+    You want to get reported? Using her name and address and everything. .\r\n"
   - "Hey, I\u2019m sorry. That was a rude. So\u2026 how have you been? I um.. missed
-    you. How\u2019s college and everything? Have you been having fun? Did you do the
-    major you always wanted to?\r\n"
-  - " Aren\u2019t you like supposed to be not alive right now? What\u2019s going on?
-    How is this possible? You\u2019re creeping me out. \r\n"
-  - "Okay okay, you got me. I was kidding. So, what\u2019s up? Are you like all grown
-    up? It\u2019s been a while, huh. \r\n"
-  - "No, a lot has changed so, I did not mean it that way. How have you been? Are
-    you doing well? I believe you too just graduated like me. Have you started working?\r\n"
+    you. How\u2019s school? Have you been having fun? Did you major in Art like you
+    always wanted to?"
+  - "Aren\u2019t you supposed to be dead? What\u2019s going on? How is this possible?
+    You\u2019re creeping me out. \r\n"
+  - "Sorry, It\u2019s been a while since you wrote to me and I was not sure how to
+    respond. How are you?"
+  - "I believe you too graduated, just like me. Have you started working? How\u2019s
+    everyone back home?\r\n"
   - " Not really. How come you\u2019re traveling? I thought you weren\u2019t planning
     to come back till you settled down. \r\n"
-  - "Well, no. Life happens. Have you been in touch with anyone else from the camp?
-    Or is it just me you are set out to haunt?\r\n"
+  - " it\u2019s funny how life just happened. Have you written to anyone else from
+    the camp? Or is it just me you are set out to haunt?\r\n"
   - "Congratulations! That was bound to happen at some point. \r\n"
   - "Sorry for the long wait, But I had a lot of work recently. That\u2019s great
     news, at least you are doing something in life. I have been busy too, so that
-    makes us two. \r\n"
+    makes us two. "
   - "Work has been troublesome. It\u2019s just so hard to transition from college
     to work life. Not that you would know anything about it, seems like you are enjoying
-    work. And I am happy for you. But you should delay coming here if you\u2019re
-    still new in your workplace.\r\n"
+    work. And I am happy for you. But it\u2019s not good to take holidays so soon
+    if you just started working.\r\n"
   - "Oh God, not the Chair joke from the camp! That was a terrible joke from the beginning.
     We should totally go to camp you know, if you can fly in a few days earlier we
     can probably make it. \r\n"
-  - "CHAIR! TABLE! WE ARE ABLE! IT\u2019S NOT A FABLE! Ha ha those were good days.
-    Whenever you visit next, do scream that from the top of that Pear Tree we had
-    next to the lake.\r\n"
+  - "What a catch, what a match! This Chair is the best place to hatch! Ha ha that
+    terrible advertisement. Those were good days. Whenever you visit next, do scream
+    that from the top of that Pear Tree we had next to the lake.\r\n"
   - "Oh. Was that a joke? I don\u2019t even remember that, it was such a long time
     ago. I mean, things have changed Jennifer, we have changed and I don\u2019t think
     we can go back to the way it was so instantly. "
-  weight: 010000000200000003000000020000000400000005000000050000000500000005000000050000000500000005000000050000000500000005000000
+  - So, how are you planning to travel? And are you traveling alone? It might be best
+    to avoid road trips, there has been an increase in reckless driving lately.
+  - " Let me know when you arrive, I\u2019ll try to get off from work for a couple
+    days, take you around. I\u2019m not sure though, if I\u2019ll get an off. Work
+    has been..killing me.  "
+  - "Well, I guess we could hang out or something. But I\u2019m not promising anything,
+    we are both adults and it may be hard to meet up now.  \r\n"
+  - " What time do you land? We can go straight to the camp! I don\u2019t trust you
+    to find the place, you\u2019ve been away for quite a while. \r\n"
+  - "So, I think you should have landed. Can we meet on a later date? I am unable
+    to get off of work, so can we meet the next day? I\u2019ll come pick you up. "
+  - "Ah, so I have to fix some issues with my friend\u2019s car in the neighboring
+    town. It may take a few days. I\u2019ll write as soon as I am back in town and
+    then we can meet.\r\n"
+  weight: 010000000200000003000000010000000200000003000000010000000200000003000000010000000200000003000000010000000200000003000000010000000200000003000000010000000200000003000000
   meatOfTheStory: []
 --- !u!114 &582680372
 MonoBehaviour:
@@ -1117,6 +1129,12 @@ MonoBehaviour:
   MessageRecievedButton: {fileID: 1430326687}
   replyWait: 2
   delay: 0.1
+  newspaperAnim: {fileID: 1893445998}
+  newspaperObject: {fileID: 1893445994}
+  endNewspaperSprite:
+  - {fileID: 21300000, guid: 9db92acc186ad6f4186ccbee6bccd01d, type: 3}
+  - {fileID: 21300000, guid: 656236b08385346478a598f4dd1a585c, type: 3}
+  - {fileID: 21300000, guid: 7901b4982cc5eb8479b17ab17fa97a01, type: 3}
 --- !u!114 &582680373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1187,7 @@ RectTransform:
   m_LocalScale: {x: 0.0243867, y: 0.023225429, z: 0.02409638}
   m_Children: []
   m_Father: {fileID: 1578393773}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1196,7 +1214,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -1320,7 +1338,7 @@ RectTransform:
   - {fileID: 1236342019}
   - {fileID: 948365999}
   m_Father: {fileID: 1578393773}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1339,7 +1357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1536,7 +1554,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217229567}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ac879897868cde241be08d7d641d326a, type: 3}
@@ -1665,7 +1683,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -1675,7 +1693,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Sign Letter
 --- !u!222 &1236342021
@@ -2512,7 +2530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2627,6 +2645,7 @@ Transform:
   m_LocalPosition: {x: 6.2506495, y: 0, z: 0}
   m_LocalScale: {x: 0.71836597, y: 0.5460526, z: 1}
   m_Children:
+  - {fileID: 1939828997}
   - {fileID: 918249512}
   - {fileID: 1098885996}
   m_Father: {fileID: 47873664}
@@ -2687,7 +2706,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2823,7 +2842,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b237fef3e7ae04e85cf966cef8dd26, type: 3}
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2997,7 +3016,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d27bdbd8442a0140b4a04793c32698b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9db92acc186ad6f4186ccbee6bccd01d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3033,8 +3052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Obituaries:
-  - {fileID: 21300000, guid: 6d27bdbd8442a0140b4a04793c32698b, type: 3}
-  - {fileID: 21300000, guid: a3929eef9230cfb408ae11f7a043eb17, type: 3}
+  - {fileID: 21300000, guid: 656236b08385346478a598f4dd1a585c, type: 3}
+  - {fileID: 21300000, guid: 9db92acc186ad6f4186ccbee6bccd01d, type: 3}
 --- !u!95 &1893445998
 Animator:
   serializedVersion: 3
@@ -3104,6 +3123,80 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1939828996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1939828997}
+  - component: {fileID: 1939828999}
+  - component: {fileID: 1939828998}
+  m_Layer: 5
+  m_Name: Date
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1939828997
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939828996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.024386698, y: 0.023225425, z: 0.024096379}
+  m_Children: []
+  m_Father: {fileID: 1578393773}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -12.95, y: 5.9}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1939828998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939828996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 07451cec72e72e64ab1c7104ab425521, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 1983
+--- !u!222 &1939828999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939828996}
 --- !u!1 &2058596758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,14 +3209,13 @@ GameObject:
   - component: {fileID: 2058596760}
   - component: {fileID: 2058596762}
   - component: {fileID: 2058596764}
-  - component: {fileID: 2058596763}
   m_Layer: 5
   m_Name: Reply
   m_TagString: Reply
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2058596759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3190,61 +3282,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replies:
-  - "What are you talking about? Why will this be a joke? I don\u2019t get it. Are
-    you okay? Do you want to talk about this?"
-  - "Hey, I\u2019m not sure the last post reached you. Or you have moved. Or you do
-    not remember me? \r\n"
-  - "Are YOU kidding me? Get reported for what? Are you doing drugs again? I thought
-    you stopped in school! What\u2019s wrong with you?\r\n"
+  - " What are you talking about? Why will this be a joke? I don\u2019t get it. Are
+    you okay?  -JJ, January 23rd\r, 1981\n"
+  - "Hey, I\u2019m not sure the last post reached you. Or you have moved? Please respond
+    if you have received this one. -JJ, January 23rd\r, 1981\n"
+  - "Are you kidding me? What\u2019s wrong with you? I thought it\u2019d be fun to
+    write to you but I don\u2019t understand, why are you being so weird. -JJ, January
+    23rd\r, 1981\n"
   - "Well yeah, remember the movie that came out last month? The \u201CThe Graffiti
     Artists\u201D? That finally convinced me that there is a lot of struggle in the
     art school, but it is what I love. So I might as well stick to it. Have you been
-    fine?"
+    fine? -JJ, February 15th 1981\r\n"
   - "Well yeah, potty training my retriever almost killed me, but I\u2019m fine otherwise.
-    Why did you want this to stop? Ouch, I won\u2019t write to you if that\u2019s
-    what you want. This conversation has been weird so far. \r\n"
-  - "Yes, It\u2019s been wonderful! I just caught the last killchain concert here
-    and woop! That was so good. I wonder if you still listen to them?\r\n"
-  - "Well yes and yes and yes.. I\u2019m working for this animation company out here
-    and it has been pretty freaking\u2019 awesome. \r\n"
+    This conversation has been weird so far. -JJ, February 15th 1981\r\n"
+  - "I\u2019m doing great! I just caught the last killchain concert here and woop!
+    That was so good. I wonder if you still listen to them. I remember the band we
+    had tried to form at the camp. And gosh, we were terrible at music.  -JJ, February
+    15th 1981\r\n"
+  - " Well yes and yes.. I\u2019m working for this animation company out here and
+    it has been pretty good so far. -JJ, March 2nd 1981\r\n"
   - "I\u2019ve been working, so I have saved enough to travel and visit home for once.
     Before they officially disown me. Which they probably will at some point if they
-    hear all the stories of me from college floating around.\r\n"
+    hear all the stories of me from college floating around. -JJ, March 2nd 1981\r\n"
   - "As a part time ghost, I believe it\u2019s my duty to haunt some of my dear friends.
     Has your sarcasm been turned up a notch or am I just imagining it? Can\u2019t
-    really say through letters.\r\n"
+    really say through letters. -JJ, March 2nd 1981\r\n"
   - "Well, thanks I guess. It has been a rollercoaster. But I know it\u2019s gonna
     be okay, at least I hope. I mean, I still have you for support right? Like a chair?
-    Remember the joke?\r\n"
+    Remember the joke? -JJ, May 7th 1981\r\n"
   - "That was a terrible rhyme and it made me cringe. So, tell me about you? How are
-    your folks? You seem very uninvolved in this conversation. Am I talking to a chair?\r\n"
+    your folks? You seem very uninvolved in this conversation. Am I talking to a chair?
+    -JJ, May 7th 1981\r\n"
   - "Yeah well, I won\u2019t be new in a couple months. I\u2019ll probably get an
-    office by then. Probably have those fancy cushion chairs and everything y\u2019know?\r\n"
-  - "Oh I can try! That\u2019d be so cool. Instant nostalgia right there. \r\n"
+    office by then. Probably have those fancy cushion chairs and everything y\u2019know?
+    -JJ, May 7th 1981\r\n"
+  - "Oh I can try! That\u2019d be so cool. Instant nostalgia right there. -JJ, July
+    12th 1981\r\n"
   - "What do you mean visit next? You should totally come with me. I mean the camp
-    might probably be closed but we can actually go hang out there. I think there
-    was a cafe there too. Think we can go when I visit?\r\n"
+    might probably be closed but we can go hang out there. I think there was a cafe
+    there too. Think we can go when I visit? -JJ, July 12th 1981\r\n"
   - "That\u2019s exactly why I think we should meet. Refresh our memories and figure
     out how much we have grown. I think that\u2019s how old friendships are maintained.
-    \r\n"
-  - YOLO
-  - YOLO
-  - YOLO
+    \ -JJ, July 12th 1981\r\n"
+  - ": Calm down Holmes! I\u2019m a big girl now and I can drive myself to places
+    okay? I\u2019ll reach safely don\u2019t worry. I\u2019ll have to fly in anyway,
+    it\u2019s too long a drive. -JJ, August 15th 1981\r\n"
+  - " C\u2019mon! Just a day or two. It\u2019ll be worth it! I can already imagine
+    all the fun we will have. -JJ, August 15th 1981\r\n"
+  - "Alright. Try. Not forcing you. -JJ, August 15th 1981\r\n"
+  - "SURE! I\u2019m postponing everything for this, so you better be on time! I\u2019m
+    landing at 8 AM. Hope to see you there. Lots of love. -JJ, November 25th 1981\r\n"
+  - "Sure, any time is fine, Let me know? I\u2019ll drop by later if you don\u2019t
+    mind. I wanted to meet your folks as well. -JJ, November 25th 1981\r\n"
+  - "I can\u2019t believe the excuses you are coming up with! It\u2019s okay, I think
+    it\u2019s better we don\u2019t meet. Maybe what we had was beautiful, but I guess
+    it\u2019s gone now. I hope you have a good life. -JJ, November 25th 1981\r\n"
   replyText: {fileID: 310298410}
---- !u!114 &2058596763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2058596758}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 0.07, y: -1.33}
-  m_UseGraphicAlpha: 1
 --- !u!114 &2058596764
 MonoBehaviour:
   m_ObjectHideFlags: 0

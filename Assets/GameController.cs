@@ -18,8 +18,19 @@ public class GameController : MonoBehaviour {
     private static int lastChoice = -1;
 
     private string partialText;
-    private string fullText = "From Davis";
+    private string fullText = "From, Davis";
     public float delay = 0.1f;
+    public static bool begining = true;
+    public static bool end = false;
+    private bool signed = false;
+    private bool showEnd = false;
+
+    [SerializeField]
+    public Animator newspaperAnim;
+    [SerializeField]
+    public GameObject newspaperObject;
+    [SerializeField]
+    public List<Sprite> endNewspaperSprite;
 
     public void Start()
     {
@@ -55,6 +66,7 @@ public class GameController : MonoBehaviour {
             Letter.letterId++;
             StartCoroutine(WaitForReply());
             lastChoice = Letter.currentChoice;
+            signed = true;
         }
         //Debug.Log(totalWeightage);
     }
@@ -78,20 +90,35 @@ public class GameController : MonoBehaviour {
     }
     public void ContinueWithLetter()
     {
-        GameObject.FindGameObjectWithTag("Choice01").GetComponent<Button>().interactable = true;
-        GameObject.FindGameObjectWithTag("Choice02").GetComponent<Button>().interactable = true;
-        GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = true;
+        signed = false;
+        if (begining)
+        {
+            signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
+            ReplyLetter.SetActive(false);
+            signMailButton.interactable = true;
+            begining = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Choice01").GetComponent<Button>().interactable = true;
+            GameObject.FindGameObjectWithTag("Choice02").GetComponent<Button>().interactable = true;
+            GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = true;
 
-        signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
-        ReplyLetter.SetActive(false);
-        signMailButton.interactable = true;
+            signMailButton.GetComponentInChildren<Text>().text = "Sign Mail";
+            ReplyLetter.SetActive(false);
+            signMailButton.interactable = true;
+        }
+        if(Letter.letterId > 7)
+        {
+            showEnd = true;
+        }
     }
 
     public void RecievedMail()
     {
-        MessageRecievedButton.SetActive(false);
         ReplyLetter.SetActive(true);
-        UpdateChoices();
+        if(signed)
+            UpdateChoices();
         signMailButton.interactable = true;
     }
 
@@ -99,6 +126,7 @@ public class GameController : MonoBehaviour {
     {
         yield return new WaitForSeconds(replyWait);
         MessageRecievedButton.SetActive(true);
+        MessageRecievedButton.GetComponent<AudioSource>().Play();
     }
 
     IEnumerator OutputText()
@@ -111,8 +139,49 @@ public class GameController : MonoBehaviour {
         }
     }
   
+    public void EndGame(int ending)
+    {
+        //Show Newspaper
+        newspaperAnim.Play("Newspaper01");
+        newspaperObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        newspaperObject.GetComponent<SpriteRenderer>().sprite = endNewspaperSprite[ending];
+        end = true;
+            
+    }
     public void Update()
     {
-      //  Debug.Log(Choices.route.Count);
+        if(Letter.letterId > 7)
+        {
+            GameObject.FindGameObjectWithTag("Choice01").GetComponent<Button>().interactable = false;
+            GameObject.FindGameObjectWithTag("Choice02").GetComponent<Button>().interactable = false;
+            GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = false;
+        }
+        if(Letter.letterId > 6)
+        {
+            if(totalWeightage < 16)
+            {
+                GameObject.FindGameObjectWithTag("Choice03").GetComponent<Button>().interactable = false;
+            }
+        }
+        
+    if (Letter.letterId > 7  && ! end && showEnd)
+        {
+            if(totalWeightage >= 16)
+            {
+                //Good Ending
+                EndGame(2);
+            }
+            else if(totalWeightage >= 12)
+            {
+                //Bad Ending 2
+                EndGame(1);
+            }
+            else
+            {
+                //Bad Ending 
+                EndGame(0);
+            }
+            
+        }
     }
 }

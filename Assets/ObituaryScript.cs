@@ -10,12 +10,13 @@ public class ObituaryScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
-	}
+        gameObject.GetComponent<SpriteRenderer>().sprite = Obituaries[1];
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if(Obituaries.Count != 0)
-        gameObject.GetComponent<SpriteRenderer>().sprite = Obituaries[1];
+        if(Obituaries.Count != 0 && Letter.letterId < 7) 
+            gameObject.GetComponent<SpriteRenderer>().sprite = Obituaries[1];
 	}
 
     public void OnNewpaperClick()

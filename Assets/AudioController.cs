@@ -6,6 +6,6 @@ public class AudioController : MonoBehaviour {
 
     private void OnEnable()
     {
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
     }
 }
