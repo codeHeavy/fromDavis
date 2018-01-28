@@ -8,16 +8,25 @@ public class Prologue : MonoBehaviour {
     public TextMesh textMesh;
     public List<string> introText;
     public int currentIndex = 0;
+    public int currentImageIndex = 0;
     float TotalTime = 0.0F;
-
+    float TotalTimeImage = 0.0F;
+    public List<Sprite> sprites;
+    public GameObject Background;
+    SpriteRenderer spRenderer;
+    Color originalColor;
 	// Use this for initialization
 	void Start () {
         textMesh.color = Color.black;
+        spRenderer = Background.GetComponent<SpriteRenderer>();
+        originalColor = spRenderer.color;
     }
 
     void FadeOutText()
     {
-        var newColor = Color.Lerp(textMesh.color, Color.black, 0.1f);
+        Color c = Color.black;
+        c.a = 0;
+        var newColor = Color.Lerp(textMesh.color, c, 0.1f);
         textMesh.color = newColor;
     }
 
@@ -27,10 +36,25 @@ public class Prologue : MonoBehaviour {
         textMesh.color = newColor;
     }
 
+    void FadeInImage()
+    {
+        var c = spRenderer.color;
+        spRenderer.color = Color.Lerp(spRenderer.color, originalColor, 0.1f);
+    }
+
+    void FadeOutImage()
+    {
+        var c = spRenderer.color;
+        c.a = 0;
+        spRenderer.color = Color.Lerp(spRenderer.color, c, 0.1f);
+    }
+
     // Update is called once per frame
     void Update () {
         TotalTime += Time.deltaTime;
+        TotalTimeImage += Time.deltaTime;
         UpdateState();
+        UpdateImage();
         if(currentIndex == introText.Count-1)
         {
             SceneManager.LoadScene("Scene1");
@@ -64,4 +88,34 @@ public class Prologue : MonoBehaviour {
             }
         }
     }
+
+    void UpdateImage()
+    {
+        if (TotalTimeImage > 10F)
+        {
+            if (currentImageIndex + 1 < sprites.Count)
+            {
+                currentImageIndex++;
+                TotalTimeImage = 0F;
+            }
+            else
+            {
+                TotalTimeImage = 10F;
+            }
+        }
+        else
+        {
+            if (TotalTimeImage > 0F && TotalTimeImage < 1F)
+            {
+                spRenderer.sprite = sprites[currentImageIndex];
+                FadeInImage();
+            }
+            else if (TotalTimeImage > 8F)
+            {
+                FadeOutImage();
+            }
+        }
+    }
+
+
 }
